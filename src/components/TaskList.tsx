@@ -16,7 +16,7 @@ type TaskListProps = {
 export default function TaskList({ tasks, onToggle, onDelete }: TaskListProps) {
   // If no tasks, show a placeholder
   if (tasks.length === 0) {
-    return <p className="text-gray-500 text-center mt-4">No tasks yet, Get productive!</p>;
+    return <p className="text-purple-500 text-center mt-4">No tasks yet, Get productive!</p>;
   }
 
   // If there is tasks render them

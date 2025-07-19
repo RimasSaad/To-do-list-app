@@ -23,10 +23,10 @@ export default function FilterBar({ currentFilter, onFilterChange }: FilterBarPr
           key={filter}
           type="button"
           onClick={() => onFilterChange(filter)} // when clicked, notify parent
-          className={`px-4 py-1 rounded border text-sm font-medium transition ${
+          className={`px-4 py-1 rounded border text-sm font-medium cursor-pointer transition ${
             currentFilter === filter
-              ? 'bg-blue-500 text-white border-blue-500'    // active filter 
-              : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100' // inactive filter
+              ? 'bg-purple-400 text-white border-purple-400'    // active filter 
+              : 'bg-purple text-purple-700 border-purple-300 hover:bg-purple-100' // inactive filter
           }`}
         >
           {/* Capitalize the first letter of the filter name */}

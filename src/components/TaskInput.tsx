@@ -35,13 +35,13 @@ export default function TaskInput({ onAddTask }: TaskInputProps) {
         placeholder="Add a task..."
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
-        className="flex-grow px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className="flex-grow px-4 py-2 rounded text-purple-500 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
       />
 
       {/* Add button */}
       <button
         type="submit"
-        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        className="px-4 py-2 bg-purple-400 text-white rounded hover:bg-purple-500 cursor-pointer"
       >
         Add
       </button>

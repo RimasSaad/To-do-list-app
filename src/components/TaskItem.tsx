@@ -17,8 +17,8 @@ type TaskItemProps = {
 export default function TaskItem({ task, onToggle, onDelete }: TaskItemProps) {
   return (
     <li
-      // <li> with conditional background based on completion
-      className={`flex items-center justify-between p-3 border rounded ${
+      // Conditional background based on completion
+      className={`flex items-center justify-between p-3 border border-purple-400 rounded ${
         task.completed ? 'bg-gray-100' : 'bg-white'
       }`}
     >
@@ -29,13 +29,13 @@ export default function TaskItem({ task, onToggle, onDelete }: TaskItemProps) {
           type="checkbox"
           checked={task.completed}
           onChange={() => onToggle(task.id)}
-          className="w-5 h-5 text-blue-600"
+          className="w-5 h-5 accent-purple-600"
         />
 
         {/* Task title: applies line-through and gray text when completed */}
         <span
           className={`text-lg ${
-            task.completed ? 'line-through text-gray-500' : 'text-gray-900'
+            task.completed ? 'line-through text-gray-400' : 'text-gray-700'
           }`}
         >
           {task.title}
@@ -46,7 +46,7 @@ export default function TaskItem({ task, onToggle, onDelete }: TaskItemProps) {
       <button
         type="button"
         onClick={() => onDelete(task.id)}
-        className="text-gray-500 hover:text-red-500"
+        className="text-gray-500 hover:text-red-500 cursor-pointer"
       >
         <TrashIcon className="w-5 h-5" />
       </button>
